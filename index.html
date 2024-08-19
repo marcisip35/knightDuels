@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Duels</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <!-- -->
+</head>
+
+<body id="body">
+    <!-- Main Content -->
+    <div id="mainContent">
+        <div class="wrapper">
+            <div class="container">
+                <div id="menuTitle">
+                    <img src="./assets/menuImages/menuTitleImage.png">
+                </div>
+                <div class="menuItem">
+                    <button id="playButton"><img src="./assets/menuImages/menuPlayImage.png"></button>
+                </div>
+                <div class="menuItem">
+                    <button id="guideButton"><img src="./assets/menuImages/menuGuideImage.png"></button>
+                </div>
+                <div class="menuItem">
+                    <button id="knightsButton"><img src="./assets/menuImages/menuKnightsImage.png"></button>
+                </div>
+                <div class="menuItem">
+                    <button id="weaponsButton"><img src="./assets/menuImages/menuWeaponsImage.png"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Play Content-->
+    <div id="playContent">
+        <div class="wrapper">
+            <div class="container">
+                <h1 style="margin-top: 20px" id="selectALevelText">Select A Level</h1>
+                <div id="levelsMenu">
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>1</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>2</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>3</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>4</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>5</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>6</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>7</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>8</h1>
+                    </div>
+                    <div class="level">
+                        <h2>Level</h2>
+                        <h1>9</h1>
+                    </div>
+                </div>
+
+                <!-- Level One -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level One</h1>
+                            <p>The Peasant is a hardworking member of the working class, although at the bottom of the
+                                hiearchy pyramind, the peasant knight is trying to make a name for themselves and
+                                challenges you in a local bar.</br></br>
+                                Health: 80</br>
+                                Weapon: Club</br>
+                                Damage: 10</br>
+                                *Cannot Parry*
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Peasant Knight</h1>
+                            <img src="./assets/knightsAssets/peasantKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level One</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/peasantKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Peasant Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">It is an honour to meet someone like
+                                    you.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">I am a commoner who wants to be a
+                                    Knight.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">To make a name for myself, I challenge
+                                    you to a duel!</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Two -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Two</h1>
+                            <p>The Squire Knight is a Knighted Knight's helper, his knowledge is expanded by watching
+                                other Knights fight, this Squire Knight would one day want to be Knighted, as you exit
+                                your Kingdom's castle he meets you outside.</br></br>
+                                Health: 90</br>
+                                Weapon: Cutlass</br>
+                                Damage: 15</br>
+                                Parry: 10%
+                            </p>
+                            <h2>Rewards: Commander Knight, Long Sword Unlocked</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Squire Knight</h1>
+                            <img src="./assets/knightsAssets/squireKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Two</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/squireKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Squire Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">My honours Knight, I heard you are
+                                    leading an Army.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Before we part, may I challenge you to
+                                    a quick duel?</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Lets do this!</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Three-->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Three</h1>
+                            <p>The Enemy Infantry Knight is the first Knighted Knight that you face, as your army
+                                marches towards the enemy castle, you meet one of the noble lords army, he commands one
+                                of his infantry knight to duel you</br></br>
+                                Health: 100</br>
+                                Weapon: Sword</br>
+                                Damage: 20</br>
+                                Parry: 15%
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Enemy Infantry Knight</h1>
+                            <img src="./assets/knightsAssets/enemyInfantryKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Three</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/enemyInfantryKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Enemy Infantry Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">Our bannermen will defeat you.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">You will not get past me.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Prepare to die.</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Four -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Four</h1>
+                            <p>The Captain Knight meets you after you have defeated the enemy infantry knight, the enemy
+                                lord's army refuses to lose. The Captain Knight offers a duel, if he wins. Your army
+                                will Surrender.</br></br>
+                                Health: 150</br>
+                                Weapon: Long Sword</br>
+                                Damage: 25</br>
+                                Parry: 20%
+                            </p>
+                            <h2>Rewards: Baron Knight, Battle Axe Unlocked</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Captain Knight</h1>
+                            <img src="./assets/knightsAssets/knightCaptainImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Four</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/knightCaptainImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Captain Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">You have defeated my Army, but I still
+                                    stand.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Before you pass me, you must kill me.
+                                </p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Arggghhhhhh!!!</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Five -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Five</h1>
+                            <p>The Viscount Knight charges at you after you have defeated the Captain Knight in battle,
+                                your Kingdom's Army and the enemy Army engage in battle, you duel the Viscount
+                                Knight</br></br>
+                                Health: 200</br>
+                                Weapon: Battle Axe</br>
+                                Damage: 30</br>
+                                *Cannot Parry*
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Viscount Knight</h1>
+                            <img src="./assets/knightsAssets/viscountKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Five</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/viscountKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Viscount Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">You have defeated the Captain Knights
+                                    Army? You say.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Ofcourse, they were never any good.
+                                </p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Now you face me, prepare.</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Six -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Six</h1>
+                            <p>You have defeated the Viscount Knight's Army, as you march towards the enemy Castle, you
+                                meet the Duke Knight's army, after hearing you have defeated one of his allies army, he
+                                charges at you.</br></br>
+                                Health: 250</br>
+                                Weapon: Great Sword</br>
+                                Damage: 35</br>
+                                Parry: 30%
+                            </p>
+                            <h2>Rewards: Noble Knight, Great Sword Unlocked</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Duke Knight</h1>
+                            <img src="./assets/knightsAssets/dukeKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Six</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/dukeKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Duke Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">I am impressed you and your Army has
+                                    gotten this far.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">But your Army has shrunk, theres no
+                                    way you get past our defenses.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">You will not get through those doors.
+                                </p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Seven -->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Seven</h1>
+                            <p>After defeating the Duke Knight's Army, you approach the enemy castle and face the
+                                Champion Knight at the Castle Doors</br></br>
+                                Health: 300</br>
+                                Weapon: Mace</br>
+                                Damage: 40</br>
+                                *Cannot Parry*
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Champion Knight</h1>
+                            <img src="./assets/knightsAssets/championKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Seven</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/championKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Champion Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">Ut enim ad minim veniam.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Excepteur sint occaecat cupidatat non
+                                    proident.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">Sed ut perspiciatis unde omnis iste
+                                    natus error sit voluptatem.</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- level Eight-->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Eight</h1>
+                            <p>You breach the castle and head to the King's palace, his kingsguard the Templar Knight
+                                steps in, but he tells him to back off, and challenges you, the King say's this will be
+                                a quick battle.</br></br>
+                                Health: 400</br>
+                                Weapon: Warhammer</br>
+                                Damage: 45</br>
+                                Parry: 40%
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>King Knight</h1>
+                            <img src="./assets/knightsAssets/kingKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Eight</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/kingKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">King Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">I got this Templar Knight. You have
+                                    gotten this far.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">I am very impressed. But your army is
+                                    dead.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">You are here standing alone, this is
+                                    where you stop.</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <!-- Level Nine-->
+                <div class="levelNumber">
+                    <div class="levelNumberMenu">
+                        <div class="left">
+                            <h1>Level Nine</h1>
+                            <p>You have defeated the King Knight, and the Templar Knight say's that you are a fraud and
+                                but impressed, he say's he has never been defeated in battle, after he has defeated you
+                                he say's that he will be King.</br></br>
+                                Health: 500</br>
+                                Weapon: Dual Swords</br>
+                                Damage: 60</br>
+                                Parry: 50%
+                            </p>
+                            <h2>Rewards: None</h2>
+                        </div>
+                        <div class="right">
+                            <h1>Templar Knight</h1>
+                            <img src="./assets/knightsAssets/templarKnightImage.png" />
+                            <button type="button" class="levelPlayButton">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelNumberPlay">
+                    <div class="letterBoxing letterBoxingTop">
+                    </div>
+                    <h1 class="levelDisplayText">Level Nine</h1>
+                    <div class="levelNumberPlayDisplay">
+                        <img class="enemySprite" src="./assets/knightsAssets/templarKnightImage.png" />
+                        <div class="playEnemyHealth">
+                            <h1 class="playName">Templar Knight</h1>
+                            <div class="playEnemyHealthBar">
+                                <p class="playerEnemyHealth">HP &nbsp;20 / 20</p>
+                                <div class="playerEnemyHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playHealth">
+                            <h1 class="playName">Infantry Knight</h1>
+                            <div class="playHealthBar">
+                                <p class="playerHealth">HP &nbsp;10 / 20</p>
+                                <div class="playerHealthBar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playBox">
+                            <div class="leftDialogue">
+                                <p class="levelDisplayDialogue dialogueAnimation">Our King is pathetic, he is a fool to
+                                    duel you.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">I have transcended you to another
+                                    realm.</p>
+                                <p class="levelDisplayDialogue dialogueAnimation">You cannot even imagine what real
+                                    power is.</p>
+                                <button type="button" class="dialogueContinue">Continue</button>
+                            </div>
+                            <div class="leftControls">
+                                <div class="attackArrowsDiv">
+                                    <p class="leftAttackPercentage">0%</p>
+                                    <img class="leftAttackArrow attackArrows" src="./assets/playAssets/arrowLeft.png"/>
+                                    <p class="rightAttackPercentage">70%</p>
+                                    <img class="rightAttackArrow attackArrows" src="./assets/playAssets/arrowRight.png"/>
+                                    <p class="upAttackPercentage">50%</p>
+                                    <img class="upAttackArrow attackArrows" src="./assets/playAssets/arrowUp.png"/>
+                                    <p class="downAttackPercentage">25%</p>
+                                    <img class="downAttackArrow attackArrows" src="./assets/playAssets/arrowDown.png"/>
+                                </div>
+                                <div class="defendArrows">
+                                </div>
+                                <div class="attackDefendControls">
+                                    <p class="turnNumberText">Turn: 1 <span style="color: darkred;">Attacking</span></p>
+                                    <h1 class="turnText">Your Turn</h1>
+                                    <button type="button" class="attackButton">Attack</button>
+                                    <button type="button" class="defendButton">Defend</button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" class="playButtonReturn">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letterBoxing letterBoxingBottom"></div>
+                </div>
+
+                <button class="backButton"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guide Menu -->
+    <div id="guideContent">
+        <div class="wrapper">
+            <div class="container">
+                <div id="guide">
+                    <h1 style="text-align: center;"><span style="color: brown">Knight Duels</span> is a turned based
+                        solo game where the point of the game is to get the enemy knight to 0 health and complete all 9
+                        levels</h1>
+                    <p><span class="number">1.</span> Click Play and Select A Level, there are 9 different enemy knights
+                        on each level.</p>
+                    <p><span class="number">2.</span> You and your enemy will take turns playin a move</p>
+                    <p>There are 2 moves available, attack and defend</p>
+                    <p>Swords can swing, thrust and parry while axe's can only swing and parry</p>
+                    <p>Shields block greater damage but decrease your next attack</p>
+                    <p><span class="number">3.</span> You can select a Knight in the Knights tab in the Main Menu</p>
+                    <p>There are 4 playable Knights, to unlock a Knight you must have that level playable</p>
+                    <p><span class="number">4.</span> You can select a Weapon in the Weapons tab in the Main Menu</p>
+                    <p>There are 4 Weapons available and 1 shield, you can always carry a Shield</p>
+                </div>
+                <button class="backButton"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Knights Menu -->
+    <div id="knightsContent">
+        <div class="wrapper">
+            <div class="container">
+                <div id="playableOrEnemySelection">
+                    <button id="playableKnightsButton">Playable Knights</button>
+                    <h1 id="selectAKnightText">Select A Knight</h1>
+                    <button id="enemyKnightsButton">Enemy Knights</button>
+                </div>
+
+                <div id="playableKnightsMenu">
+                    <div id="infantryKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/infantryKnightImage.png">
+                        <p>Health: 100</p>
+                        <p>Weapon: Sword</p>
+                        <p class="levelUnlockedText">Unlocked</p>
+                        <h1>Infantry Knight</h1>
+                    </div>
+                    <div id="commanderKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/commanderKnightImage.png">
+                        <p>Health: 150</p>
+                        <p>Weapon: Long Sword</p>
+                        <p class="levelUnlockedText">Unlocked</p>
+                        <h1>Commander Knight</h1>
+                    </div>
+                    <div id="baronKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/baronKnightImage.png">
+                        <p>Health: 200</p>
+                        <p>Weapon: Battle Axe</p>
+                        <p class="levelUnlockedText">Unlocked</p>
+                        <h1>Baron Knight</h1>
+                    </div>
+                    <div id="nobleKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/nobleKnightImage.png">
+                        <p>Health: 300</p>
+                        <p>Weapon: Great Sword</p>
+                        <p class="levelUnlockedText">Unlocked</p>
+                        <h1>Noble Knight</h1>
+                    </div>
+                </div>
+
+                <div id="enemyKnightsMenu">
+                    <div id="peasantEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/peasantKnightImage.png">
+                        <p>Health: 80</p>
+                        <p>Weapon: Club</p>
+                        <p>Level: 1</p>
+                        <h1>Peasant Knight</h1>
+                    </div>
+                    <div id="squireEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/squireKnightImage.png">
+                        <p>Health: 90</p>
+                        <p>Weapon: Cutlass</p>
+                        <p>Level: 2</p>
+                        <h1>Squire Knight</h1>
+                    </div>
+                    <div id="infantryEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/enemyInfantryKnightImage.png">
+                        <p>Health: 100</p>
+                        <p>Weapon: Sword</p>
+                        <p>Level: 3</p>
+                        <h1>Enemy Infantry Knight</h1>
+                    </div>
+                    <div id="captainEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/knightCaptainImage.png">
+                        <p>Health: 150</p>
+                        <p>Weapon: Long Sword</p>
+                        <p>Level: 4</p>
+                        <h1>Captain Knight</h1>
+                    </div>
+                    <div id="viscountEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/viscountKnightImage.png">
+                        <p>Health: 200</p>
+                        <p>Weapon: Battle Axe</p>
+                        <p>Level: 5</p>
+                        <h1>Viscount Knight</h1>
+                    </div>
+                    <div id="dukeEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/dukeKnightImage.png">
+                        <p>Health: 250</p>
+                        <p>Weapon: Great Sword</p>
+                        <p>Level: 6</p>
+                        <h1>Duke Knight</h1>
+                    </div>
+                    <div id="championEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/championKnightImage.png">
+                        <p>Health: 300</p>
+                        <p>Weapon: Mace</p>
+                        <p>Level: 7</p>
+                        <h1>Champion Knight</h1>
+                    </div>
+                    <div id="kingEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/kingKnightImage.png">
+                        <p>Health: 400</p>
+                        <p>Weapon: War Hammer</p>
+                        <p>Level: 8</p>
+                        <h1>King Knight</h1>
+                    </div>
+                    <div id="templarEnemyKnight" class="knightCard">
+                        <img src="./assets/knightsAssets/templarKnightImage.png">
+                        <p>Health: 500</p>
+                        <p>Weapon: Dual Sword</p>
+                        <p>Level:9</p>
+                        <h1>Templar Knight</h1>
+                    </div>
+                </div>
+
+                <div id="pageButtons">
+                    <button type="button" class="previousPage">Previous Page</button>
+                    <button type="button" class="previousPage">Previous Page</button>
+                    <p class="numberOfPages"></p>
+                    <button type="button" class="nextPage">Next Page</button>
+                    <button type="button" class="nextPage">Next Page</button>
+                </div>
+
+                <button class="backButton"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weapons Menu -->
+    <div id="weaponsContent">
+        <div class="wrapper">
+            <div class="container">
+                <h1 style="margin-top: 20px">Select A Weapon</h1>
+                <div id="weapons">
+                    <div id="sword" class="weapon">
+                        <img src="./assets/weaponsAssets/swordImage.png">
+                        <p>Damage: 20</p>
+                        <p>Parry Block: 20%</p>
+                        <p class="weaponUnlockedText">Unlocked</p>
+                        <h1>Sword</h1>
+                    </div>
+                    <div id="longSword" class="weapon">
+                        <img src="./assets/weaponsAssets/longSwordImage.png">
+                        <p>Damage: 25</p>
+                        <p>Parry Block: 40%</p>
+                        <p class="weaponUnlockedText">Unlocked</p>
+                        <h1>Long Sword</h1>
+                    </div>
+                    <div id="battleAxe" class="weapon">
+                        <img src="./assets/weaponsAssets/battleAxeImage.png">
+                        <p>Damage: 30</p>
+                        <p>Parry Block: 0%</p>
+                        <p class="weaponUnlockedText">Unlocked</p>
+                        <h1>Battle Axe</h1>
+                    </div>
+                    <div id="greatSword" class="weapon">
+                        <img src="./assets/weaponsAssets/greatSwordImage.png">
+                        <p>Damage: 35</p>
+                        <p>Parry Block: 60%</p>
+                        <p class="weaponUnlockedText">Unlocked</p>
+                        <h1>Great Sword</h1>
+                    </div>
+                </div>
+                <div id="pageButtons">
+                    <button type="button" class="previousPage">Previous Page</button>
+                    <p class="numberOfPages"></p>
+                    <button type="button" class="nextPage">Next Page</button>
+                </div>
+                <button class="backButton"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
