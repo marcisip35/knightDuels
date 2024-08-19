@@ -1,0 +1,753 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gold: goldenrod;
+    --red: maroon;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    /* background-image: url(./assets/guideImages/guideBackgroundImage.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Main Content*/
+#mainContent, #playContent, #guideContent, #knightsContent, #weaponsContent{
+    height: 100%;
+    width: 100%;
+    
+    display: grid;
+    place-items: center
+}
+
+.wrapper{
+    height: 100%;
+    width: 1200px;
+    /* border: 1px solid red; */
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainContent .container{
+    gap: 50px;
+}
+
+/* Menu Items */
+#menuTitle{
+    height: 200px;
+    width: 700px;
+    object-fit: cover;
+    
+    display: grid;
+    place-items: center;
+}
+
+#menuTitle img{
+    width: 55%;
+    height: 100%;
+}
+
+.menuItem{
+    height: 110px;
+    width: 250px;
+}
+
+#playButton, #guideButton, #knightsButton, #weaponsButton{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+}
+
+#playButton:hover, #guideButton:hover, #knightsButton:hover, #weaponsButton:hover{
+    padding: 0px;
+}
+
+#playButton img, #guideButton img, #knightsButton img, #weaponsButton img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.backButton{
+    height: 100px;
+    width: 200px;
+    border: none;
+    background-image: url(./assets/menuImages/backButtonImage.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    margin-top: auto;
+    margin-right: auto;
+}
+
+.backButton:hover{
+    margin-bottom: 10px;
+}
+
+/* Play Menu */
+#playContent{
+    display: grid;
+    place-items: center;
+    font-family: "MedievalSharp";
+}
+
+#levelsMenu{
+    height: 70%;
+    width: 50%;
+    margin-top: 50px;
+
+    display: none;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+}
+
+.level{
+    height: 200px;
+    width: 150px;
+    background-image: url(./assets/playAssets/levelSelectionImage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--gold);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.level:hover{
+    font-size: 27px;
+    padding: 80px;
+}
+
+.levelPlayButton{
+    height: 50px;
+    width: 160px;
+    cursor: pointer;
+    font-family: "MedievalSharp";
+    background-color: var(--gold);
+    border: 2px solid var(--red);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.levelPlayButton:hover{
+    border: 4px solid var(--red);
+}
+
+/* Level Menu Declarations*/
+.levelNumber{
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.levelNumberMenu{
+    max-height: 600px;
+    width: 100%;
+    margin-top: 100px;
+    border-radius: 8px;
+    padding: 50px;
+    background-color: burlywood;
+
+    display: flex;
+    gap: 50px;
+}
+
+.levelNumberMenu .left{
+    height: 100%;
+    width: 50%;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.levelNumberMenu .right{
+    height: 100%;
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.levelNumberMenu .right img{
+    height: 400px;
+}
+
+/* Level Play */
+.levelNumberPlay{
+    height: 100vh;
+    width: 100vw;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.letterBoxing{
+    height: 0%;
+    width: 100%;
+    background-color: black;
+    transition: 3s;
+}
+
+.levelNumberPlayDisplay{
+    height: 81%;
+    width: 1200px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.levelNumberPlayDisplay h1{
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: black;
+}
+
+.playEnemyHealth{
+    height: 90px;
+    width: 270px;
+    background-color: #a10b00;
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playHealth{
+    height: 90px;
+    width: 270px;
+    margin-top: auto;
+    margin-left: auto;
+    background-color: darkcyan;
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playBox{
+    height: 180px;
+    width: 100%;
+    background-color: burlywood;
+    border: 2px solid maroon;
+    border-radius: 16px;
+    margin-top: 4px;
+
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.playBox .leftDialogue{
+    height: 100%;
+    width: 70%;
+    padding: 5px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playBox .leftControls{
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+
+    display: none;
+    flex-direction: row;
+}
+
+.playBox .right{
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: flex-end;
+}
+
+.playEnemyHealthBar{
+    height: 50%;
+    width: 100%;
+    border: 2px solid white;
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.playHealthBar{
+    height: 50%;
+    width: 100%;
+    border: 2px solid white;
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.playerEnemyHealthBar{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(255, 49, 49);
+}
+
+.playerHealthBar{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(255, 49, 49);
+}
+
+.playerEnemyHealth, .playerHealth{
+    position: absolute;
+    font-weight: 700;
+    color: white;
+    padding: 6px;
+}
+
+.levelDisplayText{
+    color: white;
+    letter-spacing: 3px;
+    font-size:40px;
+    width: 500px;
+    text-shadow: 2px 1px 2px black;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end) forwards;
+
+    text-align: center;
+}
+
+.levelDisplayDialogue{
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    width: 0;  
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+}
+
+.dialogueAnimation{
+    animation: typingTwo 2.5s steps(100, end) forwards;
+}
+
+.dialogueContinue{
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "MedievalSharp";
+    cursor: pointer;
+    background-color: lightskyblue;
+    border-radius: 8px;
+    border: 2px solid var(--red);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogueContinue:hover{
+    border: 3px solid var(--red);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 300px; }
+}
+
+@keyframes typingTwo{
+    from {
+        width: 0;
+    } to {
+        width: 100%;
+    }
+}
+
+.playButtonReturn{
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "MedievalSharp";
+    cursor: pointer;
+    background-color: var(--gold);
+    border-radius: 8px;
+    border: 2px solid var(--red);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButtonReturn:hover{
+    border: 3px solid var(--red);
+}
+
+/* Controls */
+.attackArrowsDiv{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.attackArrows{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.leftAttackArrow{
+    top: 70px;
+    left: 40px;
+}
+
+.rightAttackArrow{
+    top: 70px;
+    left: 180px;
+}
+
+.upAttackArrow{
+    height: 50px;
+    top: 15px;
+    left: 112px;
+}
+
+.downAttackArrow{
+    height: 50px;
+    top: 75px;
+    left: 112px;
+}
+
+.leftAttackPercentage{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    font-size: 12px;
+}
+
+.rightAttackPercentage{
+    position: absolute;
+    top: 80px;
+    left: 235px;
+    font-size: 12px;
+}
+
+.upAttackPercentage{
+    position: absolute;
+    left: 125px;
+    font-size: 12px;
+}
+
+.downAttackPercentage{
+    position: absolute;
+    bottom: 0px;
+    left: 125px;
+    font-size: 12px;
+}
+
+.attackDefendControls{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.attackButton{
+    height: 40px;
+    width: 150px;
+    font-family: "MedievalSharp";
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: orangered;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.attackButton:hover{
+    border: 2px dashed white;
+}
+
+.defendButton{
+    height: 40px;
+    width: 150px;
+    font-family: "MedievalSharp";
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    background-color: aqua;
+    font-weight: 700;
+    cursor: grab;
+}
+
+.defendButton:hover{
+    border: 2px dashed white;
+}
+
+.turnNumberText{
+    letter-spacing: 0.5px;
+}
+
+/* Sprites */
+.enemySprite{
+    position: absolute;
+    z-index: -1;
+    top: 230px;
+    left: 900px;
+    height: 600px;
+    width: 600px;
+}
+
+/* Guide Menu */
+#guideContent{
+    display: grid;
+    place-items: center;
+    font-family: "MedievalSharp";
+}
+
+#guide{
+    height: 80%;
+    width: 100%;
+    margin-top: 50px;
+    background-color: burlywood;
+    border-radius: 6px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#guide p{
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+#guide .number{
+    color: red;
+}
+
+/* Knights Menu */
+#knightsContent{
+    font-family: "MedievalSharp";
+    letter-spacing: 0.5px;
+
+    display: grid;
+    place-items: center;
+}
+
+#playableOrEnemySelection{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#playableOrEnemySelection button{
+    height: 50px;
+    width: 250px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "MedievalSharp";
+    letter-spacing: 0.5px;
+    color: white;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+}
+
+#playableOrEnemySelection button:hover{
+    border: 3px solid var(--gold);
+}
+
+#playableKnightsButton{
+    background-color: #0049a8;
+
+    display: grid;
+    place-items: center;
+}
+
+#enemyKnightsButton{
+    background-color: var(--red);
+
+    display: grid;
+    place-items: center;
+}
+
+#playableKnightsMenu{
+    height: 580px;
+    width: 100%;
+    background-color: burlywood;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#playableKnightsMenu .knightCard{
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;    
+}
+
+#playableKnightsMenu .knightCard:hover{
+    padding: 0px;
+    border: 2px solid var(--gold);
+}
+
+#enemyKnightsMenu{
+    height: 580px;
+    width: 100%;
+    background-color: burlywood;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.knightCard, .enemyKnightCard{
+    height: 90%;
+    width: 30%;
+    text-align: center;
+
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#pageButtons{
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#pageButtons button{
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "MedievalSharp";
+    cursor: pointer;
+    background-color: var(--gold);
+    border-radius: 8px;
+    border: 1px solid var(--red);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pageButtons button:hover{
+    border: 2px solid var(--red);
+}
+
+.numberOfPages{
+    font-weight: 700;
+}
+
+/* Weapons Menu */
+#weaponsContent{
+    display: grid;
+    place-items: center;
+    font-family: "MedievalSharp";
+}
+
+#weapons{
+    height: 65%;
+    width: 100%;
+    background-color: burlywood;
+    margin-top: 50px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weapon{
+    height: 90%;
+    width: 30%;
+    text-align: center;
+    padding: 0px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.weapon:hover{
+    border: 2px solid var(--gold);
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.weapon img{
+    height: 380px;
+    width: 100%;
+}
+
+
