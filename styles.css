@@ -283,7 +283,7 @@ body{
 
 .playBox .leftDialogue{
     height: 100%;
-    width: 70%;
+    width: 80%;
     padding: 5px;
 
     display: none;
@@ -293,22 +293,29 @@ body{
 
 .playBox .leftControls{
     height: 100%;
-    width: 50%;
+    width: 40%;
     padding: 5px;
 
     display: none;
     flex-direction: row;
 }
 
+.playBox .livePlayDialogue{
+    height: 100%;
+    width: 40%;
+
+    display: none;
+    place-items: center;
+}
+
 .playBox .right{
     height: 100%;
-    width: 50%;
+    width: 20%;
     padding: 5px;
 
     display: flex;
     flex-direction: column;
-    justify-content:end;
-    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .playEnemyHealthBar{
@@ -431,71 +438,143 @@ body{
 }
 
 /* Controls */
-.attackArrowsDiv{
+.attackArrowsDiv, .defendArrowsDiv{
     height: 100%;
-    width: 50%;
+    width: 65%;
     position: relative;
 }
 
-.attackArrows{
+.defendArrowsDiv{
+    display: none;
+}
+
+.attackArrows, .defendArrows{
     width: 45px;
     height: 45px;
     position: absolute;
     cursor: pointer;
 }
 
-.leftAttackArrow{
+.leftAttackArrow, .leftDefendArrow{
     top: 70px;
     left: 40px;
 }
 
-.rightAttackArrow{
+.rightAttackArrow, .rightDefendArrow{
     top: 70px;
     left: 180px;
 }
 
-.upAttackArrow{
+.upAttackArrow, .upDefendArrow{
     height: 50px;
     top: 15px;
     left: 112px;
 }
 
-.downAttackArrow{
+.downAttackArrow, .downDefendArrow{
     height: 50px;
     top: 75px;
     left: 112px;
 }
 
-.leftAttackPercentage{
+.leftAttackPercentage, .leftDefendPercentage{
     position: absolute;
     top: 80px;
     left: 10px;
     font-size: 12px;
 }
 
-.rightAttackPercentage{
+.rightAttackPercentage, .rightDefendPercentage{
     position: absolute;
     top: 80px;
     left: 235px;
     font-size: 12px;
 }
 
-.upAttackPercentage{
+.upAttackPercentage, .upDefendPercentage{
     position: absolute;
     left: 125px;
     font-size: 12px;
 }
 
-.downAttackPercentage{
+.downAttackPercentage, .downDefendPercentage{
     position: absolute;
     bottom: 0px;
     left: 125px;
     font-size: 12px;
 }
 
+.enemyAttackArrowsDiv{
+    width: 100%;
+    display: none;
+    position: relative;
+}
+
+.enemyArrowsDiv{
+    width: 100%;
+    opacity: 0;
+    position: relative;
+}
+
+.enemyArrows{
+    width: 20px;
+    height: 20px;
+}
+
+.leftEnemyArrow, .leftEnemyAttackArrow{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+.rightEnemyArrow, .rightEnemyAttackArrow{
+    position: absolute;
+    top: 40px;
+    right: 75px;
+}
+
+.upEnemyArrow, .upEnemyAttackArrow{
+    position: absolute;
+    top: 15px;
+    left: 90px;
+}
+
+.downEnemyArrow, .downEnemyAttackArrow{
+    position: absolute;
+    top: 58px;
+    left: 90px;
+}
+
+.leftEnemyPercentage, .leftEnemyAttackPercentage{
+    position: absolute;
+    font-size: 10px;
+    top: 45px;
+    left: 30px;
+}
+
+.rightEnemyPercentage, .rightEnemyAttackPercentage{
+    position: absolute;
+    font-size: 10px;
+    top: 45px;
+    right: 57px;
+}
+
+.upEnemyPercentage, .upEnemyAttackPercentage{
+    position: absolute;
+    font-size: 10px;
+    left: 95px;
+}
+
+.downEnemyPercentage, .downEnemyAttackPercentage{
+    position: absolute;
+    font-size: 10px;
+    top: 82px;
+    left: 95px;
+}
+
 .attackDefendControls{
     height: 100%;
-    width: 50%;
+    width: 35%;
 
     display: flex;
     justify-content: flex-end;
@@ -515,7 +594,7 @@ body{
 }
 
 .attackButton:hover{
-    border: 2px dashed white;
+    border: 2px solid white;
 }
 
 .defendButton{
@@ -530,7 +609,7 @@ body{
 }
 
 .defendButton:hover{
-    border: 2px dashed white;
+    border: 2px solid white;
 }
 
 .turnNumberText{
