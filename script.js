@@ -54,6 +54,10 @@ function playMenu() {
     const playButtonReturn = document.getElementsByClassName("playButtonReturn");
     const levelDisplayDialogue = document.getElementsByClassName("levelDisplayDialogue");
     const leftControls = document.getElementsByClassName("leftControls");
+    const livePlayDialogue = document.getElementsByClassName("livePlayDialogue");
+    const enemyArrowsDiv = document.getElementsByClassName("enemyArrowsDiv");
+    const enemyAttackArrowsDiv = document.getElementsByClassName("enemyAttackArrowsDiv");
+
     mainContent.style.display = "none";
     backButton[0].style.display = "block";
     playContent.style.display = "grid";
@@ -388,16 +392,150 @@ function playMenu() {
         const attackButton = document.getElementsByClassName("attackButton");
         const defendButton = document.getElementsByClassName("defendButton");
         const turnNumberText = document.getElementsByClassName("turnNumberText");
+        const leftAttackArrow = document.getElementsByClassName("leftAttackArrow");
+        const rightAttackArrow = document.getElementsByClassName("rightAttackArrow");
+        const upAttackArrow = document.getElementsByClassName("upAttackArrow");
+        const downAttackArrow = document.getElementsByClassName("downAttackArrow");
+
+        const leftDefendArrow = document.getElementsByClassName("leftDefendArrow");
+        const rightDefendArrow = document.getElementsByClassName("rightDefendArrow");
+        const upDefendArrow = document.getElementsByClassName("upDefendArrow");
+        const downDefendArrow = document.getElementsByClassName("downDefendArrow");
+
+        const leftAttackPercentage = document.getElementsByClassName("leftAttackPercentage");
+        const rightAttackPercentage = document.getElementsByClassName("rightAttackPercentage");
+        const upAttackPercentage = document.getElementsByClassName("upAttackPercentage");
+        const downAttackPercentage = document.getElementsByClassName("downAttackPercentage");
+
+        const leftDefendPercentage = document.getElementsByClassName("leftDefendPercentage");
+        const rightDefendPercentage = document.getElementsByClassName("rightDefendPercentage");
+        const upDefendPercentage = document.getElementsByClassName("upDefendPercentage");
+        const downDefendPercentage = document.getElementsByClassName("downDefendPercentage");
+
+        const attackArrowDiv = document.getElementsByClassName("attackArrowsDiv");
+        const defendArrowDiv = document.getElementsByClassName("defendArrowsDiv");
+
+        const leftEnemyDefendPercentage = document.getElementsByClassName("leftEnemyPercentage");
+        const rightEnemyDefendPercentage = document.getElementsByClassName("rightEnemyPercentage");
+        const upEnemyDefendPercentage = document.getElementsByClassName("upEnemyPercentage");
+        const downEnemyDefendPercentage = document.getElementsByClassName("downEnemyPercentage");
+
+        const leftEnemyAttackPercentage = document.getElementsByClassName("leftEnemyAttackPercentage");
+        const rightEnemyAttackPercentage = document.getElementsByClassName("rightEnemyAttackPercentage");
+        const upEnemyAttackPercentage = document.getElementsByClassName("upEnemyAttackPercentage");
+        const downEnemyAttackPercentage = document.getElementsByClassName("downEnemyAttackPercentage");
+
+        let leftAttackPercent = 0;
+        let rightAttackPercent = 0;
+        let upAttackPercent = 0;
+        let downAttackPercent = 0;
+
+        let leftDefendPercent = 0;
+        let rightDefendPercent = 0;
+        let upDefendPercent = 0;
+        let downDefendPercent = 0;
+
+        let leftEnemyAttackPercent = 0;
+        let rightEnemyAttackPercent = 0;
+        let upEnemyAttackPercent = 0;
+        let downEnemyAttackPercent = 0;
+
+        let leftEnemyDefendPercent = 0;
+        let rightEnemyDefendPercent = 0;
+        let upEnemyDefendPercent = 0;
+        let downEnemyDefendPercent = 0;
+
         let turn = 1;
         leftControls[i].style.display = "flex";
+        livePlayDialogue[i].style.display = "grid";
+        enemyArrowsDiv[i].style.opacity = "1";
+        turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
 
-        attackButton[i].addEventListener("click", function(){
-            turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
-        });
+        attackControls(i);
+        defendControls(i);
+        enemyControls(i);
 
-        defendButton[i].addEventListener("click", function(){
-            turnNumberText[i].innerHTML = `Turn: ${turn} <spa style="color: blue";n>Defending</span>`;
-        });
+        function attackControls(i){
+            leftAttackPercentage[i].innerText = `${leftAttackPercent}%`;
+            rightAttackPercentage[i].innerText = `${rightAttackPercent}%`;
+            upAttackPercentage[i].innerText = `${upAttackPercent}%`;
+            downAttackPercentage[i].innerText = `${downAttackPercent}%`;
+
+            attackButton[i].addEventListener("click", function(){
+                defendArrowDiv[i].style.display = "none";
+                attackArrowDiv[i].style.display = "flex";
+                enemyAttackArrowsDiv[i].style.display = "none";
+                enemyArrowsDiv[i].style.display = "flex";
+            });
+
+            leftAttackArrow[i].addEventListener("click", function(){
+                setTimeout(function(){
+                    turn++;
+                    turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                }, 2000);
+            });
+    
+            rightAttackArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+    
+            upAttackArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+    
+            downAttackArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+        }
+
+        function defendControls(i){
+            leftDefendPercentage[i].innerText = `${leftDefendPercent}%`;
+            rightDefendPercentage[i].innerText = `${rightDefendPercent}%`;
+            upDefendPercentage[i].innerText = `${upDefendPercent}%`;
+            downDefendPercentage[i].innerText = `${downDefendPercent}%`;
+
+            defendButton[i].addEventListener("click", function(){
+                attackArrowDiv[i].style.display = "none";
+                defendArrowDiv[i].style.display = "flex";
+                enemyArrowsDiv[i].style.display = "none";
+                enemyAttackArrowsDiv[i].style.display = "flex";
+            });
+    
+            leftDefendArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+    
+            rightDefendArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+    
+            upDefendArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+    
+            downDefendArrow[i].addEventListener("click", function(){
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+            });
+        }
+
+        function enemyControls(i){
+            leftEnemyAttackPercentage[i].innerText = `${leftEnemyAttackPercent}%`;
+            rightEnemyAttackPercentage[i].innerText = `${rightEnemyAttackPercent}%`;
+            upEnemyAttackPercentage[i].innerText = `${upEnemyAttackPercent}%`;
+            downEnemyAttackPercentage[i].innerText = `${downEnemyAttackPercent}%`;
+
+            leftEnemyDefendPercentage[i].innerText = `${leftEnemyDefendPercent}%`;
+            rightEnemyDefendPercentage[i].innerText = `${rightEnemyDefendPercent}%`;
+            upEnemyDefendPercentage[i].innerText = `${upEnemyDefendPercent}%`;
+            downEnemyDefendPercentage[i].innerText = `${downEnemyDefendPercent}%`;
+        }
     }
 
     //Hide all Play and Level divs, return to Main Menu
@@ -410,6 +548,10 @@ function playMenu() {
             letterBoxingsTop[i].style.height = "0%";
             letterBoxingsBottom[i].style.height = "0%";
             leftControls[i].style.display = "none";
+            livePlayDialogue[i].style.display = "none";
+            enemyArrowsDiv[i].style.opacity = "0";
+            enemyArrowsDiv[i].style.display = "flex";
+            enemyAttackArrowsDiv[i].style.display= "none";
         }
 
         for (let i = 0; i < levelDisplayDialogue.length; i++) {
