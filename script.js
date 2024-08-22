@@ -11,7 +11,7 @@ const statsArray = statsArrayFunction();
 
 let selectedKnight = "Infantry Knight";
 let selectedWeapon = "Sword";
-let levelsUnlocked = 9;
+let levelsUnlocked = 2;
 let knightsUnlocked = 1;
 let weaponsUnlocked = 1;
 
@@ -76,39 +76,73 @@ function playMenu() {
             levels[i].style.fontSize = "25px";
         }
 
-        //levels selection
+        //level selection
         levels[i].addEventListener("click", function () {
-            levelsMenu.style.display = "none";
-            selectALevelText.style.display = "none";
             levelSelected = i + 1;
 
             switch (levelSelected) {
                 case 1:
-                    levelOne();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelOne();
+                    }
                     break;
                 case 2:
-                    levelTwo();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelTwo();
+                    }
                     break;
                 case 3:
-                    levelThree();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelThree();
+                    }
                     break;
                 case 4:
-                    levelFour();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelFour();
+                    }
                     break;
                 case 5:
-                    levelFive();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelFive();
+                    }
                     break;
                 case 6:
-                    levelSix();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelSix();
+                    }
                     break;
                 case 7:
-                    levelSeven();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelSeven();
+                    }
                     break;
                 case 8:
-                    levelEight();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelEight();
+                    }
                     break;
                 case 9:
-                    levelNine();
+                    if(levelSelected <= levelsUnlocked){
+                        levelsMenu.style.display = "none";
+                        selectALevelText.style.display = "none";
+                        levelNine();
+                    }
                     break;
                 default:
             }
@@ -449,7 +483,7 @@ function playMenu() {
         leftControls[i].style.display = "flex";
         livePlayDialogue[i].style.display = "grid";
         enemyArrowsDiv[i].style.opacity = "1";
-        turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+        turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
 
         attackControls(i);
         defendControls(i);
@@ -471,23 +505,23 @@ function playMenu() {
             leftAttackArrow[i].addEventListener("click", function(){
                 setTimeout(function(){
                     turn++;
-                    turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                    turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
                 }, 2000);
             });
     
             rightAttackArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
     
             upAttackArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
     
             downAttackArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
         }
 
@@ -506,22 +540,22 @@ function playMenu() {
     
             leftDefendArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
     
             rightDefendArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
     
             upDefendArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
     
             downDefendArrow[i].addEventListener("click", function(){
                 turn++;
-                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">Attacking</span>`;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
             });
         }
 
