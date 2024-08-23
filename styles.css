@@ -308,6 +308,26 @@ body{
     place-items: center;
 }
 
+.livePlayText{
+    width: 0;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    animation: typingThree 2.5s steps(100, end) forwards;
+}
+
+.livePlayEnemyText{
+
+}
+
+@keyframes typingThree{
+    from{
+        width: 0;
+    } to {
+        width: 100%;
+    }
+}
+
 .playBox .right{
     height: 100%;
     width: 20%;
@@ -415,6 +435,8 @@ body{
         width: 100%;
     }
 }
+
+
 
 .playButtonReturn{
     height: 40px;
