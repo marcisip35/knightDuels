@@ -11,7 +11,7 @@ const statsArray = statsArrayFunction();
 
 let selectedKnight = "Infantry Knight";
 let selectedWeapon = "Sword";
-let levelsUnlocked = 2;
+let levelsUnlocked = 9;
 let knightsUnlocked = 1;
 let weaponsUnlocked = 1;
 
@@ -459,6 +459,9 @@ function playMenu() {
         const upEnemyAttackPercentage = document.getElementsByClassName("upEnemyAttackPercentage");
         const downEnemyAttackPercentage = document.getElementsByClassName("downEnemyAttackPercentage");
 
+        const livePlayText = document.getElementsByClassName("livePlayText");
+        const livePlayEnemyText = document.getElementsByClassName("livePlayEnemyText");
+
         let leftAttackPercent = 0;
         let rightAttackPercent = 0;
         let upAttackPercent = 0;
@@ -503,10 +506,9 @@ function playMenu() {
             });
 
             leftAttackArrow[i].addEventListener("click", function(){
-                setTimeout(function(){
-                    turn++;
-                    turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
-                }, 2000);
+                turn++;
+                turnNumberText[i].innerHTML = `Turn: ${turn} <span style="color: darkred;">${selectedWeapon}</span>`;
+                turnDialogue(i, "Your attack was effective", "Your enemy attacked from the top", livePlayText, livePlayEnemyText);
             });
     
             rightAttackArrow[i].addEventListener("click", function(){
@@ -569,6 +571,29 @@ function playMenu() {
             rightEnemyDefendPercentage[i].innerText = `${rightEnemyDefendPercent}%`;
             upEnemyDefendPercentage[i].innerText = `${upEnemyDefendPercent}%`;
             downEnemyDefendPercentage[i].innerText = `${downEnemyDefendPercent}%`;
+        }
+    }
+
+    function turnDialogue(i, playerDialogue, enemyDialogue, livePlayText, livePlayEnemyText){
+        livePlayText[i].innerText = "";
+        livePlayEnemyText[i].innerText = ""; 
+        livePlayerDialogueFunction(livePlayerEnemyDialogueFunction);
+
+        function livePlayerDialogueFunction(callback){
+            for(let j = 0; j < playerDialogue.length; j++){
+                setTimeout(()=>{
+                    livePlayText[i].innerHTML += playerDialogue.charAt(j);
+                },80 * j);
+                callback();
+            };
+        }
+
+        function livePlayerEnemyDialogueFunction(){
+            for(let k = 0; k < enemyDialogue.length; k++){
+                setTimeout(()=>{
+                    livePlayEnemyText[i].innerHTML += enemyDialogue.charAt(k);
+                }, 80 * k);
+            };
         }
     }
 
