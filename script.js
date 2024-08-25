@@ -575,25 +575,25 @@ function playMenu() {
     }
 
     function turnDialogue(i, playerDialogue, enemyDialogue, livePlayText, livePlayEnemyText){
-        livePlayText[i].innerText = "";
-        livePlayEnemyText[i].innerText = ""; 
-        livePlayerDialogueFunction(livePlayerEnemyDialogueFunction);
-
-        function livePlayerDialogueFunction(callback){
-            for(let j = 0; j < playerDialogue.length; j++){
-                setTimeout(()=>{
-                    livePlayText[i].innerHTML += playerDialogue.charAt(j);
-                },80 * j);
-                callback();
-            };
+        const dialogueLetterTimer = 50;
+        livePlayText[i].innerHTML = " ";
+        livePlayEnemyText[i].innerHTML = " ";
+    
+        // First loop for playerDialogue
+        for (let j = 0; j < playerDialogue.length; j++) {
+            setTimeout(() => {
+                livePlayText[i].innerHTML += playerDialogue.charAt(j);
+            }, dialogueLetterTimer * j);
         }
-
-        function livePlayerEnemyDialogueFunction(){
-            for(let k = 0; k < enemyDialogue.length; k++){
-                setTimeout(()=>{
-                    livePlayEnemyText[i].innerHTML += enemyDialogue.charAt(k);
-                }, 80 * k);
-            };
+    
+        // Calculate the total time for the first loop to finish
+        let playerDialogueTime = dialogueLetterTimer * playerDialogue.length;
+    
+        // Second loop for enemyDialogue, starting after playerDialogue is done
+        for (let k = 0; k < enemyDialogue.length; k++) {
+            setTimeout(() => {
+                livePlayEnemyText[i].innerHTML += enemyDialogue.charAt(k);
+            }, playerDialogueTime + dialogueLetterTimer * k);
         }
     }
 
